@@ -1,0 +1,32 @@
+###########################################################################
+
+Bug list
+
+###########################################################################
+
+ #1 Re-activating connections [FIXED]
+ 
+ 
+ • How things are done :
+ 
+ When a new node appears, its id is the innovation number of the connection it's coming from.
+ We then disable this connection.
+ 
+ 
+ • Issue : 
+ 
+ After crossover, some disabled connection might be re-activated.
+ Then a new node can be formed from those connections.
+ If it happens, we will get two nodes with the same id (which is bad)
+ 
+ 
+ • Solution :
+ 
+ Change the way nodes get ids :
+ A node should get 2 numbers as id :
+ First, the innov. number of the connection it comes from.
+ And then the number of nodes with the same number in the genome.
+ 
+ 
+###########################################################################
+

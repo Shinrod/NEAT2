@@ -1,0 +1,26 @@
+digraph Network {
+	rankdir=LR
+	In1 [color="0.166 1 0.5" rank=min shape=circle tooltip=In1]
+	In2 [color="0.166 1 0.5" rank=min shape=circle tooltip=In2]
+	Bias [color="0.166 1 0.5" rank=min shape=circle tooltip=Bias]
+	Out [color="0.66 1 0.5" rank=max shape=circle tooltip=Out]
+	6.0 [label="" color="0.528 1 0.5" shape=circle tooltip=6.0 width=0.3]
+	7.0 [label="" color="0.528 1 0.5" shape=circle tooltip=7.0 width=0.3]
+	14.0 [label="" color="0.528 1 0.5" shape=circle tooltip=14.0 width=0.3]
+	In1 -> In2 [style=invis]
+	In2 -> Bias [style=invis]
+	{rank = same; In1 In2 Bias ; rankdir=LR;}
+	
+	{rank = same; Out ; rankdir=LR;}
+	
+	Bias -> 6.0 [color="0 0.6152495874645106 0.7" edgetooltip=-0.23049917492902128 penwidth=0.545748762393532]
+	6.0 -> Out [color="0.3333 1.0 0.7" edgetooltip=1 penwidth=1.7]
+	In1 -> 6.0 [color="0 1.0 0.7" edgetooltip=-1 penwidth=1.7]
+	6.0 -> 7.0 [color="0.3333 0.7810601160008936 0.7" edgetooltip=0.5621202320017872 penwidth=1.0431803480026807]
+	7.0 -> 6.0 [color="0.3333 0.9936048634143978 0.7" edgetooltip=0.9872097268287956 penwidth=1.6808145902431935]
+	In2 -> 6.0 [color="0.3333 1.0 0.7" edgetooltip=1 penwidth=1.7]
+	Bias -> 14.0 [color="0.3333 1.0 0.7" edgetooltip=1 penwidth=1.7]
+	14.0 -> 7.0 [color="0 0.6748339268789709 0.7" edgetooltip=-0.34966785375794185 penwidth=0.7245017806369127]
+	In1 -> 14.0 [color="0.3333 0.8004509211638222 0.7" edgetooltip=0.6009018423276443 penwidth=1.1013527634914664]
+	14.0 -> Out [color="0 0.8351510487137774 0.7" edgetooltip=-0.670302097427555 penwidth=1.2054531461413325]
+}
