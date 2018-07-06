@@ -157,8 +157,7 @@ class Population:
             totalSum += species.averageFitness
             averageList.append(species.averageFitness)
         probability = np.array(averageList) / totalSum
-        return np.random.choice(self.speciesList, p = probability)  # TODO : Issue : Sometimes, all the species become stale
-                                                                    # -> Perform crossover without species
+        return np.random.choice(self.speciesList, p = probability)
 
     def updateChamp(self):
         """
