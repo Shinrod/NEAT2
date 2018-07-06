@@ -1,2 +1,2 @@
-# NEAT2
-Me trying to make NEAT work
+# NEAT
+Me trying (again) to make NEAT work
